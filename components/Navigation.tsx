@@ -20,11 +20,16 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <div className="text-3xl">🍎</div>
-            <span className="font-bold text-xl text-foreground hidden sm:inline">
-              Fresh Fruits Box
-            </span>
+            <div className="flex flex-col gap-0">
+              <span className="font-bold text-xl text-foreground hidden sm:inline">
+                Fresh Fruits Box
+              </span>
+              <span className="text-xs text-primary font-semibold hidden sm:inline">
+                Proprietor: Manush Merlin
+              </span>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
