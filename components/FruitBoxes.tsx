@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
@@ -36,6 +38,14 @@ const boxes = [
 ];
 
 export default function FruitBoxes() {
+  const handleOrderClick = (boxName: string) => {
+    const message = `Hi Mansuha! I would like to order the ${boxName}. Can you please provide more details?`;
+    window.open(
+      `https://wa.me/919940547943?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
+  };
+
   return (
     <section className="py-20 bg-neutral-50">
       <div className="container mx-auto px-4">
@@ -128,6 +138,7 @@ export default function FruitBoxes() {
                     </div>
                   </div>
                   <Button
+                    onClick={() => handleOrderClick(box.name)}
                     className={`w-full py-6 text-lg font-semibold rounded-lg transition-all ${
                       box.popular
                         ? "bg-primary hover:bg-primary-dark text-white"
