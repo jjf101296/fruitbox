@@ -67,7 +67,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-bold text-foreground">Call Us</p>
-                  <p className="text-neutral-600">+1 (555) 123-4567</p>
+                  <p className="text-neutral-600">+91 9940547943</p>
                 </div>
               </div>
 
@@ -78,7 +78,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-bold text-foreground">Email</p>
-                  <p className="text-neutral-600">hello@freshfruitsbox.com</p>
+                  <p className="text-neutral-600">manusha.balaji@gmail.com</p>
                 </div>
               </div>
 
@@ -89,7 +89,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-bold text-foreground">Location</p>
-                  <p className="text-neutral-600">123 Fresh Fruit Lane, Green City, GC 12345</p>
+                  <p className="text-neutral-600">Ayappakkam, Chennai 77</p>
                 </div>
               </div>
 

@@ -63,6 +63,7 @@ export default function Hero() {
               src="/hero-fruits.jpg"
               alt="Fresh Fruit Box"
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-contain"
               priority
             />

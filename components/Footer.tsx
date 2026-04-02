@@ -12,6 +12,11 @@ export default function Footer() {
             <p className="text-neutral-400">
               Bringing fresh, healthy fruits directly from farms to your doorstep.
             </p>
+            <div className="space-y-2 text-sm text-neutral-400">
+              <p>📞 +91 9940547943</p>
+              <p>📧 manusha.balaji@gmail.com</p>
+              <p>📍 Ayappakkam, Chennai 77</p>
+            </div>
           </div>
 
           {/* Quick Links */}

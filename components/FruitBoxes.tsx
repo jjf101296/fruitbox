@@ -5,7 +5,7 @@ const boxes = [
   {
     id: 1,
     name: "Daily Box",
-    price: "$15",
+    price: "₹75",
     description: "Perfect for individuals",
     features: ["5-6 Fruits", "Daily freshness", "Mixed selection"],
     image: "/daily-box.jpg",
@@ -14,7 +14,7 @@ const boxes = [
   {
     id: 2,
     name: "Family Box",
-    price: "$35",
+    price: "₹150",
     description: "Great for families",
     features: ["12-15 Fruits", "Variety pack", "Weekly freshness"],
     image: "/family-box.jpg",
@@ -24,7 +24,7 @@ const boxes = [
   {
     id: 3,
     name: "Premium Box",
-    price: "$55",
+    price: "₹300",
     description: "For the fruit enthusiasts",
     features: ["18-20 Fruits", "Exotic varieties", "Premium selection"],
     image: "/premium-box.jpg",
@@ -74,6 +74,7 @@ export default function FruitBoxes() {
                     src={box.image}
                     alt={box.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </div>
