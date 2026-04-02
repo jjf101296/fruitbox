@@ -6,6 +6,7 @@ const boxes = [
     id: 1,
     name: "Daily Box",
     price: "₹75",
+    weekdayPrice: "₹375",
     description: "Perfect for individuals",
     features: ["5-6 Fruits", "Daily freshness", "Mixed selection"],
     image: "/daily-box.jpg",
@@ -15,6 +16,7 @@ const boxes = [
     id: 2,
     name: "Family Box",
     price: "₹150",
+    weekdayPrice: "₹750",
     description: "Great for families",
     features: ["12-15 Fruits", "Variety pack", "Weekly freshness"],
     image: "/family-box.jpg",
@@ -25,6 +27,7 @@ const boxes = [
     id: 3,
     name: "Premium Box",
     price: "₹300",
+    weekdayPrice: "₹1500",
     description: "For the fruit enthusiasts",
     features: ["18-20 Fruits", "Exotic varieties", "Premium selection"],
     image: "/premium-box.jpg",
@@ -46,6 +49,17 @@ export default function FruitBoxes() {
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
             Select from our curated fruit boxes, each specially designed to meet different needs and preferences
           </p>
+        </div>
+
+        <div className="mb-8">
+          <div className="flex justify-center gap-4 flex-wrap">
+            <div className="inline-flex items-center gap-2">
+              <span className="text-sm font-semibold text-neutral-600">Pricing:</span>
+              <span className="px-3 py-1 bg-orange-100 text-primary rounded-full text-sm font-semibold">Daily</span>
+              <span className="text-neutral-400">|</span>
+              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">5-Day Weekday</span>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -103,10 +117,16 @@ export default function FruitBoxes() {
 
                 {/* Price and button */}
                 <div className="space-y-4">
-                  <p className="text-3xl font-bold text-foreground">
-                    {box.price}
-                    <span className="text-lg text-neutral-600">/week</span>
-                  </p>
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="bg-white bg-opacity-70 rounded-lg p-3">
+                      <p className="text-xs text-neutral-600 mb-1">Daily</p>
+                      <p className="text-xl font-bold text-foreground">{box.price}</p>
+                    </div>
+                    <div className="bg-white bg-opacity-70 rounded-lg p-3">
+                      <p className="text-xs text-neutral-600 mb-1">5 Days</p>
+                      <p className="text-xl font-bold text-green-700">{box.weekdayPrice}</p>
+                    </div>
+                  </div>
                   <Button
                     className={`w-full py-6 text-lg font-semibold rounded-lg transition-all ${
                       box.popular
