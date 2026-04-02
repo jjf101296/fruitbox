@@ -27,7 +27,7 @@ export default function Navigation() {
                 Fresh Fruits Box
               </span>
               <span className="text-xs text-primary font-semibold hidden sm:inline">
-                Proprietor: Manush Merlin
+                Proprietor: Mansuha Merlin
               </span>
             </div>
           </div>
