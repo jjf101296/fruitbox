@@ -47,9 +47,15 @@ export default function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-primary hover:bg-primary-dark text-white font-semibold px-6 py-2 rounded-lg">
-              Order Now
-            </Button>
+            <a
+              href="https://wa.me/919940547943?text=Hi%20Mansuha!%20I%20would%20like%20to%20order%20fresh%20fruits.%20Can%20you%20help%20me%20with%20the%20options?"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-primary hover:bg-primary-dark text-white font-semibold px-6 py-2 rounded-lg" asChild>
+                <span>Order Now</span>
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,9 +92,16 @@ export default function Navigation() {
                 {link.name}
               </a>
             ))}
-            <Button className="w-full bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg mt-4">
-              Order Now
-            </Button>
+            <a
+              href="https://wa.me/919940547943?text=Hi%20Mansuha!%20I%20would%20like%20to%20order%20fresh%20fruits.%20Can%20you%20help%20me%20with%20the%20options?"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Button className="w-full bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg mt-4" asChild>
+                <span>Order Now</span>
+              </Button>
+            </a>
           </div>
         )}
       </div>

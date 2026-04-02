@@ -24,12 +24,19 @@ export default function Hero() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary-dark text-white text-lg px-8 py-6 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+            <a
+              href="https://wa.me/919940547943?text=Hi%20Mansuha!%20I%20would%20like%20to%20order%20fresh%20fruits.%20Can%20you%20help%20me%20with%20the%20options?"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Order Now
-            </Button>
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary-dark text-white text-lg px-8 py-6 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+                asChild
+              >
+                <span>Order Now</span>
+              </Button>
+            </a>
             <Button
               variant="outline"
               size="lg"
