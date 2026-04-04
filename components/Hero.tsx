@@ -38,6 +38,9 @@ export default function Hero() {
               <p className="text-sm sm:text-base text-foreground font-bold">
                 ⏰ Important: Only previous day orders will be accepted and delivered next day.
               </p>
+              <p className="text-sm sm:text-base text-primary font-bold mt-2">
+                Please place your order one day in advance to ensure availability.
+              </p>
             </div>
           </div>
 
