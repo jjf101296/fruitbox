@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export default function Navigation() {
@@ -16,21 +17,36 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white bg-opacity-95 backdrop-blur border-b border-neutral-200 shadow-md">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="text-3xl">🍎</div>
-            <div className="flex flex-col gap-0">
-              <span className="font-bold text-xl text-foreground hidden sm:inline">
-                Fresh Fruits Box
-              </span>
-              <span className="text-xs text-primary font-semibold hidden sm:inline">
-                Proprietor: Mansuha Merlin
-              </span>
+    <>
+      {/* Promotional Banner */}
+      <div className="bg-gradient-to-r from-primary to-orange-500 text-white py-3 text-center font-bold text-sm sm:text-base">
+        🎉 Grab Your Summer Offer Soon! Limited Time Only!
+      </div>
+
+      <nav className="sticky top-0 z-50 bg-white bg-opacity-95 backdrop-blur border-b border-neutral-200 shadow-md">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="flex justify-between items-center h-24 sm:h-20">
+            {/* Logo */}
+            <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+              <div className="relative w-16 h-16 sm:w-14 sm:h-14 flex-shrink-0">
+                <Image
+                  src="/pazha-petti-logo.png"
+                  alt="Pazha Petti Logo"
+                  fill
+                  className="object-contain"
+                  sizes="64px"
+                  priority
+                />
+              </div>
+              <div className="flex flex-col gap-0">
+                <span className="font-bold text-base sm:text-xl text-foreground">
+                  Pazha Petti
+                </span>
+                <span className="text-xs text-primary font-semibold hidden sm:inline leading-tight">
+                  Fresh Fruit Slices
+                </span>
+              </div>
             </div>
-          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8">
@@ -81,12 +97,12 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2 border-t border-neutral-200 pt-4">
+          <div className="md:hidden pb-4 space-y-1 border-t border-neutral-200 pt-3 px-2">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block px-4 py-2 text-neutral-700 hover:bg-neutral-100 rounded-lg transition-colors font-medium"
+                className="block px-3 py-3 text-sm text-neutral-700 hover:bg-neutral-100 rounded-lg transition-colors font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
@@ -96,15 +112,16 @@ export default function Navigation() {
               href="https://wa.me/919940547943?text=Hi%20Mansuha!%20I%20would%20like%20to%20order%20fresh%20fruits.%20Can%20you%20help%20me%20with%20the%20options?"
               target="_blank"
               rel="noopener noreferrer"
-              className="block"
+              className="block px-2 pt-2"
             >
-              <Button className="w-full bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg mt-4" asChild>
+              <Button className="w-full bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg py-3" asChild>
                 <span>Order Now</span>
               </Button>
             </a>
           </div>
         )}
-      </div>
-    </nav>
+        </div>
+      </nav>
+    </>
   );
 }

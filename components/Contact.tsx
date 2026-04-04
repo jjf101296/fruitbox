@@ -24,88 +24,102 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a server
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-    }, 3000);
+    
+    try {
+      // Send email via mailto link (alternative: use an API endpoint)
+      const mailtoLink = `mailto:manusha.balaji@gmail.com?subject=New Message from ${formData.firstName} ${formData.lastName}&body=Name: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0A%0AMessage:%0A${formData.message}`;
+      
+      window.location.href = mailtoLink;
+      
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      }, 3000);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   return (
-    <section className="py-20 bg-neutral-50">
+    <section className="py-16 lg:py-20 bg-neutral-50">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Left side - Info */}
-          <div className="space-y-8">
-            <div className="space-y-4">
+          <div className="space-y-6 lg:space-y-8">
+            <div className="space-y-3 lg:space-y-4">
               <div className="inline-block px-4 py-2 bg-red-100 rounded-full">
-                <span className="text-primary font-semibold">Contact Us</span>
+                <span className="text-primary font-semibold text-sm lg:text-base">Contact Us</span>
               </div>
-              <h2 className="text-4xl font-bold text-foreground">
-                Get in Touch
+              <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-foreground">
+                Get in Touch with Pazha Petti
               </h2>
-              <p className="text-lg text-neutral-600">
-                Have questions? We&apos;d love to hear from you. Contact us anytime!
+              <p className="text-base sm:text-lg text-neutral-600">
+                Have questions or feedback? Send us a message via email. For orders, please use WhatsApp!
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 lg:space-y-6">
               {/* Phone */}
-              <div className="flex gap-4">
+              <div className="flex gap-3 lg:gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary text-xl">📞</span>
+                  <span className="text-primary text-lg lg:text-xl">📞</span>
                 </div>
                 <div>
-                  <p className="font-bold text-foreground">Call Us</p>
-                  <p className="text-neutral-600">+91 9940547943</p>
+                  <p className="font-bold text-foreground text-sm lg:text-base">Call Us</p>
+                  <p className="text-neutral-600 text-sm lg:text-base">+91 9940547943</p>
                 </div>
               </div>
 
               {/* Email */}
-              <div className="flex gap-4">
+              <div className="flex gap-3 lg:gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary text-xl">✉️</span>
+                  <span className="text-primary text-lg lg:text-xl">✉️</span>
                 </div>
                 <div>
-                  <p className="font-bold text-foreground">Email</p>
-                  <p className="text-neutral-600">manusha.balaji@gmail.com</p>
+                  <p className="font-bold text-foreground text-sm lg:text-base">Email</p>
+                  <p className="text-neutral-600 text-sm lg:text-base">manusha.balaji@gmail.com</p>
                 </div>
               </div>
 
               {/* Location */}
-              <div className="flex gap-4">
+              <div className="flex gap-3 lg:gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary bg-opacity-10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary text-xl">📍</span>
+                  <span className="text-primary text-lg lg:text-xl">📍</span>
                 </div>
                 <div>
-                  <p className="font-bold text-foreground">Location</p>
-                  <p className="text-neutral-600">Ayappakkam, Chennai 77</p>
+                  <p className="font-bold text-foreground text-sm lg:text-base">Location</p>
+                  <p className="text-neutral-600 text-sm lg:text-base">Ayappakkam, Chennai 77</p>
                 </div>
               </div>
 
               {/* WhatsApp */}
-              <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-6 text-lg font-semibold rounded-lg">
-                💬 Order on WhatsApp
-              </Button>
+              <a
+                href="https://wa.me/919940547943?text=Hi%20Mansuha!%20I%20would%20like%20to%20order%20fresh%20fruit%20slices.%20Can%20you%20help%20me%20with%20the%20options?"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-4 lg:py-6 text-base lg:text-lg font-semibold rounded-lg" asChild>
+                  <span>💬 Order on WhatsApp</span>
+                </Button>
+              </a>
             </div>
           </div>
 
           {/* Right side - Form */}
-          <div className="bg-white p-8 rounded-2xl border border-neutral-200 shadow-lg">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
+          <div className="bg-white p-6 lg:p-8 rounded-2xl border border-neutral-200 shadow-lg">
+            <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
                 <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
+                  <label className="block text-xs sm:text-sm font-semibold text-foreground mb-2">
                     First Name
                   </label>
                   <input
@@ -183,7 +197,7 @@ export default function Contact() {
                 type="submit"
                 className="w-full bg-primary hover:bg-primary-dark text-white py-6 text-lg font-semibold rounded-lg transition-all"
               >
-                {submitted ? "Message Sent! ✓" : "Send Message"}
+                {submitted ? "Email Opening... ✓" : "Send Message via Email"}
               </Button>
             </form>
           </div>
