@@ -23,25 +23,25 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 bg-neutral-50">
+    <section className="py-16 lg:py-20 bg-neutral-50">
       <div className="container mx-auto px-4">
-        <div className="text-center space-y-4 mb-16">
+        <div className="text-center space-y-3 lg:space-y-4 mb-12 lg:mb-16">
           <div className="inline-block px-4 py-2 bg-orange-100 rounded-full">
-            <span className="text-accent font-semibold">Why Choose Us</span>
+            <span className="text-accent font-semibold text-sm lg:text-base">Why Choose Us</span>
           </div>
-          <h2 className="text-4xl font-bold text-foreground">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-foreground">
             What Sets Us Apart
           </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-neutral-600 max-w-2xl mx-auto px-2">
             We&apos;re committed to delivering excellence in every aspect of our service
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-8 max-w-4xl mx-auto px-2">
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-2xl bg-white border border-neutral-200 hover:border-primary hover:shadow-xl transition-all duration-300"
+              className="group relative p-6 lg:p-8 rounded-2xl bg-white border border-neutral-200 hover:border-primary hover:shadow-xl transition-all duration-300"
             >
               {/* Number background */}
               <div className="absolute -top-4 -left-4 w-20 h-20 bg-primary opacity-10 rounded-full group-hover:bg-primary group-hover:opacity-20 transition-all duration-300"></div>

@@ -12,15 +12,15 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-neutral-50 to-white py-12 lg:py-0">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-neutral-50 to-white py-20 lg:py-0">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-64 h-64 lg:w-96 lg:h-96 bg-orange-100 rounded-full blur-3xl opacity-40"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 lg:w-96 lg:h-96 bg-red-100 rounded-full blur-3xl opacity-40"></div>
+        <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 lg:w-96 lg:h-96 bg-orange-100 rounded-full blur-3xl opacity-40"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 sm:w-64 sm:h-64 lg:w-96 lg:h-96 bg-red-100 rounded-full blur-3xl opacity-40"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-12 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="relative z-10 container mx-auto px-4 py-8 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Left Content */}
-        <div className="space-y-6 lg:space-y-8">
+        <div className="space-y-5 lg:space-y-8">
           <div className="space-y-3 lg:space-y-4">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               <span className="text-primary">Fresh Fruit</span>

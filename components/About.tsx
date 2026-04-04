@@ -1,27 +1,27 @@
 export default function About() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center space-y-6">
+        <div className="max-w-2xl mx-auto text-center space-y-4 lg:space-y-6">
           <div className="inline-block px-4 py-2 bg-orange-100 rounded-full">
-            <span className="text-accent font-semibold">About Us</span>
+            <span className="text-accent font-semibold text-sm lg:text-base">About Us</span>
           </div>
           
-          <h2 className="text-4xl font-bold text-foreground">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-foreground">
             Your Partner in Healthy Living
           </h2>
           
-          <p className="text-lg text-neutral-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-neutral-600 leading-relaxed">
             We&apos;re committed to bringing the freshest, most nutritious fruits directly from local farms to your doorstep. 
             Our mission is to make healthy living accessible, convenient, and affordable for everyone.
           </p>
           
-          <p className="text-lg text-neutral-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-neutral-600 leading-relaxed">
             With over a decade of experience in the fresh produce industry, we&apos;ve built strong relationships with trusted 
             farmers who share our commitment to quality, sustainability, and excellence.
           </p>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 pt-6 lg:pt-8">
             {[
               { number: "10K+", label: "Happy Customers" },
               { number: "50+", label: "Fruit Varieties" },

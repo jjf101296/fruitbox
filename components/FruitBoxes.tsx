@@ -93,7 +93,7 @@ export default function FruitBoxes() {
               {/* Content */}
               <div className="relative z-5 flex flex-col h-full p-5 lg:p-8">
                 {/* Image */}
-                <div className="relative h-32 sm:h-40 lg:h-48 mb-4 lg:mb-6 -mx-5 lg:-mx-8 mb-4 lg:mb-6">
+                <div className="relative h-32 sm:h-40 lg:h-48 mb-4 lg:mb-6 -mx-5 lg:-mx-8">
                   <Image
                     src={box.image}
                     alt={box.name}
