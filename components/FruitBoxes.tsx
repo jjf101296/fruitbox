@@ -9,7 +9,7 @@ const boxes = [
     name: "Corporate / Office Employees",
     price: "₹75",
     weekdayPrice: "₹375",
-    description: "Keep this box on your desk and break your fast the healthy way.",
+    description: "Skipping your breakfast? Don't worry. Keep this box on your desk and break your fast the healthy way.",
     features: ["5-6 Fruit Slices", "Daily freshness", "Mixed variety"],
     image: "/daily-box.jpg",
     color: "from-orange-50 to-yellow-50",
