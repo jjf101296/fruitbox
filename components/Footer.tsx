@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-foreground text-white">
@@ -5,8 +7,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="text-3xl">🧺</div>
+            <div className="flex items-center gap-3">
+              <div className="relative w-16 h-16 flex-shrink-0">
+                <Image
+                  src="/pazha-petti-logo.png"
+                  alt="Pazha Petti Logo"
+                  fill
+                  className="object-contain"
+                  sizes="64px"
+                />
+              </div>
               <span className="font-bold text-xl">Pazha Petti</span>
             </div>
             <p className="text-neutral-400">
