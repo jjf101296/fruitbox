@@ -24,21 +24,29 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a server
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-    }, 3000);
+    
+    try {
+      // Send email via mailto link (alternative: use an API endpoint)
+      const mailtoLink = `mailto:manusha.balaji@gmail.com?subject=New Message from ${formData.firstName} ${formData.lastName}&body=Name: ${formData.firstName} ${formData.lastName}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0A%0AMessage:%0A${formData.message}`;
+      
+      window.location.href = mailtoLink;
+      
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      }, 3000);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   return (
@@ -52,10 +60,10 @@ export default function Contact() {
                 <span className="text-primary font-semibold">Contact Us</span>
               </div>
               <h2 className="text-4xl font-bold text-foreground">
-                Get in Touch
+                Get in Touch with Pazha Petti
               </h2>
               <p className="text-lg text-neutral-600">
-                Have questions? We&apos;d love to hear from you. Contact us anytime!
+                Have questions or feedback? Send us a message via email. For orders, please use WhatsApp!
               </p>
             </div>
 
@@ -94,9 +102,15 @@ export default function Contact() {
               </div>
 
               {/* WhatsApp */}
-              <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-6 text-lg font-semibold rounded-lg">
-                💬 Order on WhatsApp
-              </Button>
+              <a
+                href="https://wa.me/919940547943?text=Hi%20Mansuha!%20I%20would%20like%20to%20order%20fresh%20fruit%20slices.%20Can%20you%20help%20me%20with%20the%20options?"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-6 text-lg font-semibold rounded-lg" asChild>
+                  <span>💬 Order on WhatsApp</span>
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -183,7 +197,7 @@ export default function Contact() {
                 type="submit"
                 className="w-full bg-primary hover:bg-primary-dark text-white py-6 text-lg font-semibold rounded-lg transition-all"
               >
-                {submitted ? "Message Sent! ✓" : "Send Message"}
+                {submitted ? "Email Opening... ✓" : "Send Message via Email"}
               </Button>
             </form>
           </div>

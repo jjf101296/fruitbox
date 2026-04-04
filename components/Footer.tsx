@@ -6,11 +6,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="text-3xl">🍎</div>
-              <span className="font-bold text-xl">Fresh Fruits Box</span>
+              <div className="text-3xl">🧺</div>
+              <span className="font-bold text-xl">Pazha Petti</span>
             </div>
             <p className="text-neutral-400">
-              Bringing fresh, healthy fruits directly from farms to your doorstep.
+              Bringing fresh, healthy fruit slices directly from farms to your doorstep. Order on WhatsApp for next-day delivery!
             </p>
             <div className="space-y-2 text-sm text-neutral-400">
               <p>📞 +91 9940547943</p>
@@ -95,7 +95,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="border-t border-neutral-800 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center md:text-left text-neutral-400 text-sm">
-            <p>&copy; 2024 Fresh Fruits Box. All rights reserved.</p>
+            <p>&copy; 2024 Pazha Petti. All rights reserved. Fresh Fruit Slices by Mansuha Merlin.</p>
             <div className="flex justify-center md:justify-end gap-6">
               <a href="#" className="hover:text-white transition-colors">
                 Facebook

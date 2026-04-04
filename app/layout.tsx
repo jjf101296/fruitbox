@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fresh Fruits Box - Premium Fruit Delivery",
-  description: "Get your daily dose of natural nutrition delivered to your doorstep. Fresh, farm-picked fruits with hygienic packaging and fast delivery.",
+  title: "Pazha Petti - Fresh Fruit Slices Delivery",
+  description: "Pazha Petti - Fresh fruit slices delivered daily. Premium quality, hygienic packaging. Order today via WhatsApp or contact us for more info.",
 };
 
 export const viewport: Viewport = {

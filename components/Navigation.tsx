@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export default function Navigation() {
@@ -16,21 +17,35 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white bg-opacity-95 backdrop-blur border-b border-neutral-200 shadow-md">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="text-3xl">🍎</div>
-            <div className="flex flex-col gap-0">
-              <span className="font-bold text-xl text-foreground hidden sm:inline">
-                Fresh Fruits Box
-              </span>
-              <span className="text-xs text-primary font-semibold hidden sm:inline">
-                Proprietor: Mansuha Merlin
-              </span>
+    <>
+      {/* Promotional Banner */}
+      <div className="bg-gradient-to-r from-primary to-orange-500 text-white py-3 text-center font-bold text-sm sm:text-base">
+        🎉 Grab Your Summer Offer Soon! Limited Time Only!
+      </div>
+
+      <nav className="sticky top-0 z-50 bg-white bg-opacity-95 backdrop-blur border-b border-neutral-200 shadow-md">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center h-20">
+            {/* Logo */}
+            <div className="flex items-center gap-3">
+              <div className="relative w-12 h-12 flex-shrink-0">
+                <Image
+                  src="/pazha-petti-logo.png"
+                  alt="Pazha Petti Logo"
+                  fill
+                  className="object-contain"
+                  sizes="48px"
+                />
+              </div>
+              <div className="flex flex-col gap-0">
+                <span className="font-bold text-lg sm:text-xl text-foreground hidden sm:inline">
+                  Pazha Petti
+                </span>
+                <span className="text-xs text-primary font-semibold hidden sm:inline">
+                  Fresh Fruit Slices by Mansuha Merlin
+                </span>
+              </div>
             </div>
-          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8">
@@ -104,7 +119,8 @@ export default function Navigation() {
             </a>
           </div>
         )}
-      </div>
-    </nav>
+        </div>
+      </nav>
+    </>
   );
 }

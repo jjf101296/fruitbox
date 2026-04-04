@@ -32,6 +32,13 @@ export default function Hero() {
             <p className="text-base sm:text-lg lg:text-xl text-neutral-600 leading-relaxed">
               Get your daily dose of natural nutrition with delicious fresh fruit slices, delivered to your doorstep. Premium quality, hygienic packaging, and fast delivery.
             </p>
+            
+            {/* Important Notice */}
+            <div className="bg-yellow-50 border-l-4 border-orange-500 p-4 rounded-lg">
+              <p className="text-sm sm:text-base text-foreground font-bold">
+                ⏰ Important: Only previous day orders will be accepted and delivered next day.
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 w-full sm:w-auto">
